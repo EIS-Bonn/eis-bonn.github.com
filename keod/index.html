@@ -4,227 +4,809 @@
 original version by:  Nikos Drakos, CBLU, University of Leeds
 * revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
 * with significant contributions from:
-  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
+
 <HEAD>
-<TITLE>Critical Aspects of Collaborative Vocabulary Development</TITLE>
-<META NAME="description" CONTENT="Critical Aspects of Collaborative Vocabulary Development">
-<META NAME="keywords" CONTENT="paper">
-<META NAME="resource-type" CONTENT="document">
-<META NAME="distribution" CONTENT="global">
+    <TITLE>COLLABORATIVE VOCABULARY DEVELOPMENT PRACTICES</TITLE>
+    <META NAME="description" CONTENT="COLLABORATIVE VOCABULARY DEVELOPMENT PRACTICES">
+    <META NAME="keywords" CONTENT="paper">
+    <META NAME="resource-type" CONTENT="document">
+    <META NAME="distribution" CONTENT="global">
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2006-1">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+    <META NAME="Generator" CONTENT="LaTeX2HTML v2006-1">
+    <META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
 
-<LINK REL="STYLESHEET" HREF="paper.css">
+    <LINK REL="STYLESHEET" HREF="paper.css">
 
-<LINK REL="next" HREF="node1.html">
+    <LINK REL="next" HREF="node51.html">
+    <LINK REL="previous" HREF="node3.html">
+    <LINK REL="up" HREF="paper.html">
+    <LINK REL="next" HREF="node5.html">
 </HEAD>
 
-<BODY >
-<!--Navigation Panel-->
-<A NAME="tex2html98"
-  HREF="node1.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
- SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A>
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
- SRC="file:/usr/local/share/lib/latex2html/icons/up_g.png">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
- SRC="file:/usr/local/share/lib/latex2html/icons/prev_g.png">
-<BR>
-<B> Next:</B> <A NAME="tex2html99"
-  HREF="node1.html">INTRODUCTION</A>
-<BR>
-<BR>
-<!--End of Navigation Panel-->
+<BODY style="margin-left:200px;margin-right:200px">
 
-<P>
+    <!--End of Navigation Panel-->
 
-<P>
+    <H1>
+        <A NAME="SECTION00040000000000000000"></A>
+        <A NAME="sec:best-practices"></A>
+        <BR> COLLABORATIVE VOCABULARY DEVELOPMENT PRACTICES
+    </H1>
 
-<P>
+    <P>
+        In this section, we provide a comprehensive list of practices for collaborative vocabulary development. We derived this list from our own experience in creating vocabularies like SCORVoc
+        <A NAME="tex2html33" HREF="footnode.html#foot403"><SUP>5</SUP></A> and MobiVoc
+        <A NAME="tex2html35" HREF="footnode.html#foot405"><SUP>6</SUP></A> in combination with the results of the aforementioned analysis in sec:vocab-analysis. It will serve as guidelines that help to focus on the most important aspects of vocabulary creation process. Therefore, it is expected to increase the efficiency
+        of the collaboration and to improve the overall quality of the vocabulary. For the sake of clarity, it should be kept in view that we consider vocabularies as lightweight ontologies. fig:phases depicts the main aspects of our approach, which are
+        described in detail in the remainder of this section.
 
-<P>
+        <P>
+            However, it is worth mentioning that these guidelines are independent of the concrete development environment. They can be applied within various circumstance. Nevertheless, we would like to encourage the adoption of a well-known distributed versioning
+            control system as the basic collaboration support environment. In this regard, we have chosen
+            <I>Git</I> due to the following two rationales. On the one hand, Git is a mature versioning control system supported by very sophisticated tools. Therefore, it is broadly used in software development projects. More than 10 million repositories
+            <A NAME="tex2html37"
+            HREF="footnode.html#foot407"><SUP>7</SUP></A> are hosted in GitHub for open source and commercial projects&nbsp;[
+            <A HREF="node53.html#kalliamvakou2015open">Kalliamvakou et&nbsp;al., 2015</A>]. On the other hand, existing popular vocabularies like
+            <I>schema.org</I>
+            <A NAME="tex2html39" HREF="footnode.html#foot409"><SUP>8</SUP></A>,
+            <I>Description of a Project</I> (DOAP)
+            <A NAME="tex2html41" HREF="footnode.html#foot412"><SUP>9</SUP></A>, the
+            <I>music ontology</I>
+            <A NAME="tex2html43" HREF="footnode.html#foot415"><SUP>10</SUP></A> also use GitHub to facilitate the collaboration of the respective communities. This indicates that the vocabulary development community is already familiar with Git.
 
-    <H1 ALIGN=CENTER>Critical Aspects of Collaborative Vocabulary Development</H1>
-    <P ALIGN=CENTER><STRONG>Irl&#225;n Grangel-Gonz&#225;lez, Lavdim Halilaj, G&#246;khan Coskun and S&#246;ren Auer</br>
+            <P>
 
+                <DIV ALIGN="CENTER">
+                    <A NAME="fig:phases"></A>
+                    <A NAME="147"></A>
+                    <TABLE>
+                        <CAPTION ALIGN="BOTTOM">
+                            <STRONG>Figure:</STRONG>
+                            Main aspects of Vocabulary Authoring.</CAPTION>
+                        <TR>
+                            <TD>
+                                <DIV ALIGN="CENTER">
+                                    <img src="images/aspects.png" />
+                                </DIV>
+                            </TD>
+                        </TR>
+                    </TABLE>
+                </DIV>
 
-    </STRONG></P>
-    <p ALIGN=CENTER>Enterprise Information Systems, University of Bonn, Germany</p>
-    <P ALIGN=CENTER><P ALIGN=CENTER><FONT SIZE=-1><A NAME="tex2html1"
-        HREF="mailto:{grangel, halilaj, coskun, auer}@cs.uni-bonn.de">{grangel, halilaj, coskun, auer}@cs.uni-bonn.de</A></FONT></P>
-        <BR><P><P ALIGN=LEFT><FONT SIZE=-1>Key words and phrases: Collaborative vocabulary development, collaborative ontology engineering.</FONT></P>
+                <P>
+                    <BR>
+                    <HR>
+                    <!--Table of Child-Links-->
+                    <A NAME="CHILD_LINKS">
+                        <STRONG>Subsections</STRONG>
+                    </A>
 
-<H3>Abstract:</H3>
-<DIV>
-A major bottleneck for a wider deployment and use of ontologies and knowledge engineering techniques is the cumbersome and inefficient collaboration support for vocabulary and ontology authoring and curation.
-We argue, that collaboration and version control techniques (e.g. Git, continuous integration) established for software engineering, can be successfully applied for ontology engineering too.
-However, successful collaborative vocabulary and ontology engineering requires guidelines and best-practices to organize the collaboration with regard to the aspects documentation, internationalization, naming, structure, reuse and evaluation.
-In this article, we collect a comprehensive library of guidelines and best-practices.
-We empirically analyze a number of popular vocabulary and ontology development efforts with regard to their use of the guidelines and best-practices.
-Inspired by this analysis we proposed a set of practices to address the above mentioned aspects.
-These practices can improve the communication of the team and, as a result, leverage the development process.
-</DIV>
-<P>
+                    <UL>
+                        <LI>
+                            <A NAME="tex2html194" HREF="#Reuse">Reuse</A>
+                            <UL>
+                                <LI>
+                                    <A NAME="tex2html195" HREF="#PR1">P-R1 Reuse of authoritative vocabularies</A>
+                                    <LI>
+                                        <A NAME="tex2html196" HREF="#PR2">P-R2 Reuse of non-authoritative vocabularies</A>
+                                        <LI>
+                                            <A NAME="tex2html197" HREF="#PR3">P-R3 Avoid semantic clashes</A>
+                                            <LI>
+                                                <A NAME="tex2html198" HREF="#PR4">P-R4 Individual resource reuse</A>
+                                                <LI>
+                                                    <A NAME="tex2html199" HREF="#PR5">P-R5 Vocabulary module reuse</A>
+                                                    <LI>
+                                                        <A NAME="tex2html200" HREF="#PR6">P-R6 Reuse of actual resources</A>
+                                                        <LI>
+                                                            <A NAME="tex2html201" HREF="#PR7">P-R7 Establishing alignments with existing vocabularies</A>
+                            </UL>
+                            <BR>
+                            <LI>
+                                <A NAME="tex2html202" HREF="#VocabularyStructure">Vocabulary Structure</A>
+                                <UL>
+                                    <LI>
+                                        <A NAME="tex2html203" HREF="#PS1">P-S1 One file for the whole vocabulary</A>
+                                        <LI>
+                                            <A NAME="tex2html204" HREF="#PS2">P-S2 Multiple files</A>
+                                            <LI>
+                                                <A NAME="tex2html205" HREF="#PS3">P-S3 Multiple files and folders</A>
+                                                <LI>
+                                                    <A NAME="tex2html206" HREF="#PS4">P-S4 Separation of TBox and ABox</A>
+                                </UL>
+                                <BR>
+                                <LI>
+                                    <A NAME="tex2html207" HREF="#NamingConventions">Naming Conventions</A>
+                                    <UL>
+                                        <LI>
+                                            <A NAME="tex2html208" HREF="#PN1">P-N1 Concepts as single nouns</A>
+                                            <LI>
+                                                <A NAME="tex2html209" HREF="#PN2">P-N2 Properties as verb senses</A>
+                                                <LI>
+                                                    <A NAME="tex2html210" HREF="#PN3">P-N3 Short names</A>
+                                                    <LI>
+                                                        <A NAME="tex2html211" HREF="#PN4">P-N4 Logical and short names for namespaces</A>
+                                                        <LI>
+                                                            <A NAME="tex2html212" HREF="#PN5">P-N5 Regular space as word delimiters for labeling elements</A>
+                                                            <LI>
+                                                                <A NAME="tex2html213" HREF="#PN6">P-N6 Avoid the use of conjunctions and or words with ambiguous meanings</A>
+                                                                <LI>
+                                                                    <A NAME="tex2html214" HREF="#PN7">P-N7 Use positive names</A>
+                                                                    <LI>
+                                                                        <A NAME="tex2html215" HREF="#PN8">P-N8 Respect the names for registered products and company names</A>
+                                                                        <LI>
+                                                                            <A NAME="tex2html216" HREF="#Dereferenceability">Dereferenceability</A>
+                                                                            <UL>
+                                                                                <LI>
+                                                                                    <A NAME="tex2html217" HREF="#PD1">P-D1 Use slash URIs</A>
+                                                                                    <LI>
+                                                                                        <A NAME="tex2html218" HREF="#PD2">P-D2 Use hash URIs</A>
+                                                                                        <LI>
+                                                                                            <A NAME="tex2html219" HREF="#PD3">P-D3 Use combination between slash and hash URIs</A>
+                                                                                            <LI>
+                                                                                                <A NAME="tex2html220" HREF="#PD4">P-D4 Configure server to provide content negotiation</A>
+                                                                            </UL>
+                                    </UL>
+                                    <BR>
+                                    <LI>
+                                        <A NAME="tex2html221" HREF="#Multilinguality">Multilinguality</A>
+                                        <UL>
+                                            <LI>
+                                                <A NAME="tex2html222" HREF="#PM1">P-M1 Use English as the main language</A>
+                                                <LI>
+                                                    <A NAME="tex2html223" HREF="#PM2">P-M2 Multilinguality for other languages</A>
+                                        </UL>
+                                        <BR>
+                                        <LI>
+                                            <A NAME="tex2html224" HREF="#Documentation">Documentation</A>
+                                            <UL>
+                                                <LI>
+                                                    <A NAME="tex2html225" HREF="#PDo1">P-Do1 Use of rdfs:label</A>
+                                                    <LI>
+                                                        <A NAME="tex2html226" HREF="#PDo2">P-Do2 Use of rdfs:comment</A>
+                                                        <LI>
+                                                            <A NAME="tex2html227" HREF="#PDo3">P-Do3 Generate human-readable documentation</A>
+                                            </UL>
+                                            <BR>
+                                            <LI>
+                                                <A NAME="tex2html228" HREF="#Validation">Validation</A>
+                                                <UL>
+                                                    <LI>
+                                                        <A NAME="tex2html229" HREF="#PV1">P-V1 Syntax validation</A>
+                                                        <LI>
+                                                            <A NAME="tex2html230" HREF="#PV2">P-V2 Code-Smell checking</A>
+                                                            <LI>
+                                                                <A NAME="tex2html231" HREF="#PV3">P-V3 Consistency checking</A>
+                                                                <LI>
+                                                                    <A NAME="tex2html232" HREF="#PV4">P-V4 Linked Data validation</A>
+                                                </UL>
+                                                <BR>
+                                                <LI>
+                                                    <A NAME="tex2html233" HREF="#Authoring">Authoring</A>
+                                                    <UL>
+                                                        <LI>
+                                                            <A NAME="tex2html234" HREF="#PA1">P-A1 Domain and range definitions for properties</A>
+                                                            <LI>
+                                                                <A NAME="tex2html235" HREF="#PA2">P-A2 Avoid inverse properties</A>
+                                                                <LI>
+                                                                    <A NAME="tex2html236" HREF="#PA3">P-A3 Use of class disjointness</A>
+                                                                    <LI>
+                                                                        <A NAME="tex2html237" HREF="#UtilizationSKOSVocabulary">Utilization of SKOS Vocabulary</A>
+                                                                        <UL>
+                                                                            <LI>
+                                                                                <A NAME="tex2html238" HREF="#PA4">P-A4 Provide <TT>skos:prefLabel</TT> to complement the labeling of concepts</A>
+                                                                                <LI>
+                                                                                    <A NAME="tex2html239" HREF="#PA5">P-A5 Use <TT>skos:altLabel</TT> to describe variations of the concept</A>
+                                                                        </UL>
+                                                    </UL>
+                    </UL>
+                    <!--End of Table of Child-Links-->
+                    <HR>
 
-<P>
+<div id="Reuse">
+<H2><A NAME="SECTION00041000000000000000">
+    Reuse</A>
+</H2>
+In the current context of vocabulary construction, the reuse of existing terms is an aspect of vital importance&nbsp;[<A
+HREF="node53.html#poveda2012reuse">Poveda-Villal&#243;n, 2012</A>,<A
+HREF="node53.html#pedrinaci2014linked">Pedrinaci et&nbsp;al., 2014</A>].
+The main idea is not to create new terms but to utilize those that are present in the existing vocabularies and to avoid redundant work.
+Apart from saving time and investment costs, ontology reuse is expected to ensure a certain level of quality.
+The reason for this is that the longer an ontology exists and is reused, the more review processes it has gone through.
+Furthermore, in the context of the Semantic Web ontologies are considered the shared conceptualizations of distributed information systems.
+In this regard, ontology reuse is also expected to support interoperability and system integration.
+Additionally, according to&nbsp;[<A
+HREF="node53.html#heath2011linked">Heath and Bizer, 2011</A>] reuse is considered to be a best-practice in vocabulary construction.
+Therefore, in the following we discuss important practices regarding reuse.
+</div>
 
+<div id="PR1">
+    <H4><A NAME="SECTION00041010000000000000">
+        P-R1 Reuse of authoritative vocabularies</A>
+    </H4>
+    We define authoritative vocabularies as vocabularies (cf. sec:vocab-analysis) which are (1) published by renowned standardization organizations; (2) used widely in a large number of other vocabularies and (3) defined in a more domain independent way addressing more general concerns.
+    Hence, these most widely used vocabularies should be considered as a first option for reuse (cf. our list of authoritative vocabularies in tab:vocabs).
+<div>
 
-<P>
-<BR><HR>
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"></A>
+    <div id="PR2">
+        <H4><A NAME="SECTION00041020000000000000">
+            P-R2 Reuse of non-authoritative vocabularies</A>
+        </H4> Search online resources, such as vocabulary registries like LOV<A NAME="tex2html46"
+        HREF="footnode.html#foot418"><SUP>11</SUP></A> and LODStats<A NAME="tex2html48"
+        HREF="footnode.html#foot420"><SUP>12</SUP></A> or ontology search engines like Swoogle<A NAME="tex2html50"
+        HREF="footnode.html#foot422"><SUP>13</SUP></A> and Watson<A NAME="tex2html52"
+        HREF="footnode.html#foot424"><SUP>14</SUP></A> to find terms to reuse.
+        The output of this process is a set of terms.
+        These terms should be ranked taking care about the number of datasets that use it, the amount of instances and the frequency in which the vocabulary or the term is reused&nbsp;[<A
+        HREF="node53.html#pedrinaci2014linked">Pedrinaci et&nbsp;al., 2014</A>].
+        Also, the semantic description and definition of the term should be checked in order to test if it fits the intended use.
+    </div>
 
-<UL>
-<LI><A NAME="tex2html100"
-  HREF="node1.html">INTRODUCTION</A>
-<LI><A NAME="tex2html101"
-  HREF="node2.html">METHOD</A>
-<LI><A NAME="tex2html102"
-  HREF="node3.html">ANALYSIS OF WIDELY USED VOCABULARIES</A>
-<LI><A NAME="tex2html103"
-  HREF="node4.html">COLLABORATIVE VOCABULARY DEVELOPMENT PRACTICES</A>
-<UL>
-<LI><A NAME="tex2html104"
-  HREF="node5.html">Reuse</A>
-<UL>
-<LI><A NAME="tex2html105"
-  HREF="node6.html">P-R1 Reuse of authoritative vocabularies</A>
-<LI><A NAME="tex2html106"
-  HREF="node7.html">P-R2 Reuse of non-authoritative vocabularies</A>
-<LI><A NAME="tex2html107"
-  HREF="node8.html">P-R3 Avoid semantic clashes</A>
-<LI><A NAME="tex2html108"
-  HREF="node9.html">P-R4 Individual resource reuse</A>
-<LI><A NAME="tex2html109"
-  HREF="node10.html">P-R5 Vocabulary module reuse</A>
-<LI><A NAME="tex2html110"
-  HREF="node11.html">P-R6 Reuse of actual resources</A>
-<LI><A NAME="tex2html111"
-  HREF="node12.html">P-R7 Establishing alignments with existing vocabularies</A>
-</UL>
-<LI><A NAME="tex2html112"
-  HREF="node13.html">Vocabulary Structure</A>
-<UL>
-<LI><A NAME="tex2html113"
-  HREF="node14.html">P-S1 One file for the whole vocabulary</A>
-<LI><A NAME="tex2html114"
-  HREF="node15.html">P-S2 Multiple files</A>
-<LI><A NAME="tex2html115"
-  HREF="node16.html">P-S3 Multiple files and folders</A>
-<LI><A NAME="tex2html116"
-  HREF="node17.html">P-S4 Separation of TBox and ABox</A>
-</UL>
-<LI><A NAME="tex2html117"
-  HREF="node18.html">Naming Conventions</A>
-<UL>
-<LI><A NAME="tex2html118"
-  HREF="node19.html">P-N1 Concepts as single nouns</A>
-<LI><A NAME="tex2html119"
-  HREF="node20.html">P-N2 Properties as verb senses</A>
-<LI><A NAME="tex2html120"
-  HREF="node21.html">P-N3 Short names</A>
-<LI><A NAME="tex2html121"
-  HREF="node22.html">P-N4 Logical and short names for namespaces</A>
-<LI><A NAME="tex2html122"
-  HREF="node23.html">P-N5 Regular space as word delimiters for labeling elements</A>
-<LI><A NAME="tex2html123"
-  HREF="node24.html">P-N6 Avoid the use of conjunctions and or words with ambiguous meanings</A>
-<LI><A NAME="tex2html124"
-  HREF="node25.html">P-N7 Use positive names</A>
-<LI><A NAME="tex2html125"
-  HREF="node26.html">P-N8 Respect the names for registered products and company names</A>
-<LI><A NAME="tex2html126"
-  HREF="node27.html">Dereferenceability</A>
-<UL>
-<LI><A NAME="tex2html127"
-  HREF="node28.html">P-D1 Use slash URIs</A>
-<LI><A NAME="tex2html128"
-  HREF="node29.html">P-D2 Use hash URIs</A>
-<LI><A NAME="tex2html129"
-  HREF="node30.html">P-D3 Use combination between slash and hash URIs</A>
-<LI><A NAME="tex2html130"
-  HREF="node31.html">P-D4 Configure server to provide content negotiation</A>
-</UL>
-</UL>
-<LI><A NAME="tex2html131"
-  HREF="node32.html">Multilinguality</A>
-<UL>
-<LI><A NAME="tex2html132"
-  HREF="node33.html">P-M1 Use English as the main language</A>
-<LI><A NAME="tex2html133"
-  HREF="node34.html">P-M2 Multilinguality for other languages</A>
-</UL>
-<LI><A NAME="tex2html134"
-  HREF="node35.html">Documentation</A>
-<UL>
-<LI><A NAME="tex2html135"
-  HREF="node36.html">P-Do1 Use of rdfs:label</A>
-<LI><A NAME="tex2html136"
-  HREF="node37.html">P-Do2 Use of rdfs:comment</A>
-<LI><A NAME="tex2html137"
-  HREF="node38.html">P-Do3 Generate human-readable documentation</A>
-</UL>
-<LI><A NAME="tex2html138"
-  HREF="node39.html">Validation</A>
-<UL>
-<LI><A NAME="tex2html139"
-  HREF="node40.html">P-V1 Syntax validation</A>
-<LI><A NAME="tex2html140"
-  HREF="node41.html">P-V2 Code-Smell checking</A>
-<LI><A NAME="tex2html141"
-  HREF="node42.html">P-V3 Consistency checking</A>
-<LI><A NAME="tex2html142"
-  HREF="node43.html">P-V4 Linked Data validation</A>
-</UL>
-<LI><A NAME="tex2html143"
-  HREF="node44.html">Authoring</A>
-<UL>
-<LI><A NAME="tex2html144"
-  HREF="node45.html">P-A1 Domain and range definitions for properties</A>
-<LI><A NAME="tex2html145"
-  HREF="node46.html">P-A2 Avoid inverse properties</A>
-<LI><A NAME="tex2html146"
-  HREF="node47.html">P-A3 Use of class disjointness</A>
-<LI><A NAME="tex2html147"
-  HREF="node48.html">Utilization of SKOS Vocabulary</A>
-<UL>
-<LI><A NAME="tex2html148"
-  HREF="node49.html">P-A4 Provide <TT>skos:prefLabel</TT> to complement the labeling of concepts</A>
-<LI><A NAME="tex2html149"
-  HREF="node50.html">P-A5 Use <TT>skos:altLabel</TT> to describe variations of the concept</A>
-</UL>
-</UL>
-</UL>
-<BR>
-<LI><A NAME="tex2html150"
-  HREF="node51.html">RELATED WORK</A>
-<LI><A NAME="tex2html151"
-  HREF="node52.html">CONCLUSION AND FUTURE WORK</A>
-<LI><A NAME="tex2html152"
-  HREF="node53.html">Bibliography</A>
-<LI><A NAME="tex2html153"
-  HREF="node54.html">About this document ...</A>
-</UL>
-<!--End of Table of Child-Links-->
-<HR>
-<!--Navigation Panel-->
-<A NAME="tex2html98"
-  HREF="node1.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
- SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A>
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
- SRC="file:/usr/local/share/lib/latex2html/icons/up_g.png">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
- SRC="file:/usr/local/share/lib/latex2html/icons/prev_g.png">
-<BR>
-<B> Next:</B> <A NAME="tex2html99"
-  HREF="node1.html">INTRODUCTION</A>
-<!--End of Navigation Panel-->
-<ADDRESS>
-lavdim
-2015-08-12
-</ADDRESS>
+    <div id="PR3">
+        <H4><A NAME="SECTION00041030000000000000">
+            P-R3 Avoid semantic clashes</A>
+        </H4> If the term has a <I>strong</I> semantic meaning for the domain, different from the existing ones, then a new element should be created.
+    </div>
+    <div id="PR4">
+        <H4><A NAME="SECTION00041040000000000000">
+            P-R4 Individual resource reuse</A>
+        </H4> Especially elements from authoritative vocabularies should be reused as individual vocabulary elements.
+        For non-authoritative vocabularies a reuse of individual identifiers is less recommendable and the creation of own vocabulary elements with a possible alignment (cf. P-R7) or the reuse of larger modules (cf. P-R5) should be considered.
+    </div>
+    <div id="PR5">
+        <H4><A NAME="SECTION00041050000000000000">
+            P-R5 Vocabulary module reuse</A>
+        </H4> (Opposite of P-R4) Often vocabularies require certain basic structures such as addresses, persons, organizations, which are already defined in non-authoritative vocabularies.
+        Such structures comprise usually the definition of one or several classes and a number of properties.
+        If the conceptualizations match the complete reuse of a whole module should be considered.
+    </div>
+    <div id="PR6">
+        <H4><A NAME="SECTION00041060000000000000">
+            P-R6 Reuse of actual resources</A>
+        </H4> By reusing the resources and their identifiers from other vocabularies, a very strong semantic commitment is being made.
+        It should be primarily considered for reuse of terms from authoritative vocabularies (P-R1) or the reuse of complete modules (P-R5).
+    </div>
+    <div id="PR7">
+
+        <H4><A NAME="SECTION00041070000000000000">
+            P-R7 Establishing alignments with existing vocabularies</A>
+        </H4> (Opposite of P-R6) Instead of the strong semantic commitment of reusing identifiers from non-authoritative vocabularies, alignments using <TT>owl:sameAs</TT>, <TT>owl:equivalentClass</TT>, <TT>owl:equivalentProperty</TT>, <TT>rdfs:subClassOf</TT>, <TT>rdfs:subPropertyOf</TT> can be established.
+
+        <P>
+            With the goal to clarify some of the proposed practices we set the following example.
+            We want to reuse the term <I>Person</I>.
+            Then, we start by using the statistics provided by LOV for this term.
+            <BR><P></P>
+                <DIV ALIGN="CENTER">
+                    <FONT SIZE="-2">
+                        <A NAME="tab:reuse"></A>	</FONT>
+                        <DIV ALIGN="CENTER"><FONT SIZE="-2">	</FONT><A NAME="387"></A>
+                            <TABLE CELLPADDING=3 BORDER="1">
+                                <CAPTION><STRONG>Table:</STRONG>
+                                    Reuse table for term <I>Person</I></CAPTION>
+                                    <TR><TH ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2">
+                                        <B>Terms</B>
+                                    </FONT></TH>
+                                    <TH ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"><B>Occurrences</B> </FONT></TH>
+                                    <TH ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"><B>Datasets</B> </FONT></TH>
+                                    <TH ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"><B>Reused by</B>
+                                    </FONT></TH>
+                                    <TH ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"><B>Documented</B> </FONT></TH>
+                                    <TH ALIGN="LEFT" VALIGN="TOP" WIDTH=75><FONT SIZE="-2"> <B>Naming Conventions</B> </FONT></TH>
+                                    <TH ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> <B>Multilinguality</B>
+                                    </FONT></TH>
+                                </TR>
+                                <TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"><TT>foaf:Person</TT>    </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 2,320,027  </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 72 </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 307 </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> Yes </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=75><FONT SIZE="-2"> Yes </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> No </FONT></TD>
+                                </TR>
+                                <TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"><TT>npg:Person</TT>     </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 0          </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 0  </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 0   </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> Yes </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=75><FONT SIZE="-2"> No </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> Yes </FONT></TD>
+                                </TR>
+                                <TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"><TT>bbccore:Person</TT> </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 0          </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 0  </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 0   </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> No </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=75><FONT SIZE="-2"> Yes </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> Yes </FONT></TD>
+                                </TR>
+                                <TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"><TT>schema:Person</TT>  </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 980,153    </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 2  </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 44  </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> Yes </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=75><FONT SIZE="-2"> Yes </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> No </FONT></TD>
+                                </TR>
+                                <TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"><TT>akt:Person</TT>     </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 3,183,315  </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 23 </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> 5   </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> No </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=75><FONT SIZE="-2"> Yes </FONT></TD>
+                                    <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=50><FONT SIZE="-2"> No </FONT></TD>
+                                </TR>
+                                <TR><TD></TD>
+                                    <TD></TD>
+                                    <TD></TD>
+                                    <TD></TD>
+                                    <TD></TD>
+                                    <TD></TD>
+                                    <TD></TD>
+                                </TR>
+                            </TABLE></DIV>
+                        </DIV>
+                        <BR>
+
+                            <P>
+                                The tab:reuse	clearly shows that the best two candidates for reusing are <TT>foaf:Person</TT> and <TT>schema:Person</TT>.
+                                In this case, there is a significant amount of occurrences for <TT>akt:Person</TT> but it is only reused by other 5 vocabularies.
+                                Also, it does not belong to the authoritative vocabularies.
+                                In this case we should chose between our two best ranked candidates.
+                                In order to do this, we should check in the ontology that will be reused, not only the ranked values but also if (1) the term is minimally documented (i.e. the use of <TT>rdfs:label</TT> and <TT>rdfs:comment</TT> or <TT>skos:prefLabel</TT> and <TT>skos:definition</TT>) ; (2) the term follows some naming conventions (i.e. CamelNotation or other notation used consistently) and (3) the term is annotated at least in English (i.e. the use of <TT>rdfs:label "Person"@en;</TT>).
+                                In this example, the best choice to reuse is the class <TT>foaf:Person</TT>.
+                                In this specific example, it is important to note that, there exist an alignment between the classes of our two best ranks candidates.
+                                Both ontologies, <I>FOAF</I> and <I>Schema.org</I>, contain <TT>owl:equivalentClass</TT> axioms that align this term <I>Person</I> respectively.
+                                This means that regarding the semantic purpose of the design any of those classes can be reused.
+                                Despite of this fact, we encourage the observations of all the mentioned criteria for reuse in order to have a clean and documented design of the ontology.
+    </div>
+    <div id="VocabularyStructure">
+        <H2><A NAME="SECTION00042000000000000000">
+            Vocabulary Structure</A>
+        </H2>
+
+        <P>
+            The larger and more complex a vocabulary is, the more difficult is the development and maintenance process.
+            In this regard, modularization is an important aspect of collaborative vocabulary development&nbsp;[<A
+            HREF="node53.html#suarez2012neon">Suarez-Figueroa et&nbsp;al., 2012</A>].
+            [<A
+            HREF="node53.html#poveda2012reuse">Poveda-Villal&#243;n, 2012</A>] describes an ontology module as a loosely coupled and self-contained component of an ontology that keeps relationships with other ontology modules.
+            Even though in some cases ontology modules are considered to be independent ontologies&nbsp;[<A
+            HREF="node53.html#d2008neon">dâ€™Aquin et&nbsp;al., 2008</A>], from the development perspective components are not treated as independent elements.
+
+            <P>
+                Organizing a vocabulary in files where each file represents a module, is a way of managing modularity within the development process.
+                Furthermore, some reports show that a module in a mid-sized vocabulary should contain between 200 and 300 lines of code&nbsp;[<A
+                HREF="node53.html#schlicht2006h">Schlicht and Stuckenschmidt, 2006</A>].
+                Since modularity depends on the overall size of the vocabulary, we see the following three possibilities how the file structure should be organized with respect to modularity.
+    </div>
+
+    <div id="PS1">
+        <H4><A NAME="SECTION00042010000000000000">
+            P-S1 One file for the whole vocabulary</A>
+        </H4>
+        When the vocabulary is small (e.g. contains less than 300 lines of code) and represents a domain which cannot be divided in sub domains,  it should be saved within one single file.
+        If the number of contributors is relatively small  and the domain of the vocabulary is very focused, organizing it into one single file might be possible, even if it exceeds 300 lines of code.
+        However, if the comprehensibility is exacerbated, splitting it into different files should be considered (P-S2).
+    </div>
+
+    <div id="PS2">
+        <H4><A NAME="SECTION00042020000000000000">
+            P-S2 Multiple files</A>
+        </H4>
+        If the vocabulary contains more then 300 lines of code or if it covers a more complex domain, it should be organized into different subdomains.
+        When the subdomains themselves are small enough they should be represented by different files within the parent folder.
+        In this case, domain experts can contribute independently by modifying modules according to their field of expertise.
+    </div>
+
+    <div id="PS3">
+        <H4><A NAME="SECTION00042030000000000000">
+            P-S3 Multiple files and folders</A>
+        </H4>
+        In case of very large vocabularies comprising complex domains, splitting the whole vocabulary into files is not sufficient, as it would lead to a large amount of files within a single folder.
+        Therefore, the subdomains should be represented by folders if they are large enough to be split into different components represented by different files.
+        In this case, the folder and file structure should reflect the complex hierarchy of the overall domain.
+    </div>
+
+    <div id="PS4">
+        <H4><A NAME="SECTION00042040000000000000">
+            P-S4 Separation of TBox and ABox</A>
+        </H4>
+        Ontologies comprise a terminological part (TBox) and the individuals (ABox).
+        Even though vocabularies are more about the terminological parts, they can also contain individuals.
+        However, authoritative vocabularies reveal that in most cases the number of individuals is quite small.
+        For the sake of completeness, it is worth mentioning that due to ambiguity of the term vocabulary, in some cases the ABox can grow and even exceed the size of the TBox significantly.
+        In this case, it should be considered to split the whole vocabulary into different files according to the TBox and the ABox.
+        This will increase the performance of reasoning process&nbsp;[<A
+        HREF="node53.html#sirin2006wine">Sirin et&nbsp;al., 2006</A>].
+    </div>
+
+    <div id="NamingConventions">
+        <H2><A NAME="SECTION00043000000000000000">
+            Naming Conventions</A>
+        </H2>
+        Following naming conventions has a high impact in vocabulary development&nbsp;[<A
+        HREF="node53.html#schober2012ontocheck">Schober et&nbsp;al., 2012</A>].
+        They provide guidance to the collaborators about the use of specific styles for naming elements.
+        Naming conventions help to avoid lexical inaccuracies and increase the robustness and exportability, specifically in cases when vocabularies should be interlinked and aligned with each other&nbsp;[<A
+        HREF="node53.html#schober2009survey">Schober et&nbsp;al., 2009</A>].
+        The utilization of meaningful names increases the robustness of context-based text mining for automatic term recognition and ease the manual and automated integration of terminological artifacts (i.e. comparison, checking, alignment and mapping)&nbsp;[<A
+        HREF="node53.html#svatek2010entity">Sv&#225;tek and &#352;v&#225;b-Zamazal, 2010</A>,<A
+        HREF="node53.html#schober2012ontocheck">Schober et&nbsp;al., 2012</A>].
+
+        <P>
+            There exists some naming patterns for ontologies<A NAME="tex2html55"
+            HREF="footnode.html#foot426"><SUP>15</SUP></A> aiming to determine best practices for naming the elements for ontologies.
+            Considering the literature on this topic&nbsp;[<A
+            HREF="node53.html#schober2007towards">Schober et&nbsp;al., 2007</A>,<A
+            HREF="node53.html#schober2009survey">Schober et&nbsp;al., 2009</A>,<A
+            HREF="node53.html#montiel2011style">Montiel-Ponsoda et&nbsp;al., 2011</A>] and the results of sec:vocab-analysis we propose some practices to be observed regarding the naming of vocabulary terms.
+            For vocabulary construction, the use of the CamelCase notation is a best practice&nbsp;[<A
+            HREF="node53.html#svatek2009ontology">Sv&#225;tek et&nbsp;al., 2009</A>].
+            Our study also indicated the presence of this notation in 62% of the cases.
+            Therefore, we propose the observation of this specific notation to be used in vocabulary construction.
+    </div>
+
+    <div id="PN1">
+        <H4><A NAME="SECTION00043010000000000000">
+            P-N1 Concepts as single nouns</A>
+        </H4> Name all concepts as single nouns using CamelCase notation (i.e. <I>PlanReturn</I>).
+    </div>
+
+    <div id="PN2">
+        <H4><A NAME="SECTION00043020000000000000">
+            P-N2 Properties as verb senses</A>
+        </H4> Name all properties as verb senses also following CamelCase approach.
+        The name of an property should not normally be a plain noun phrase, in order to clearly distinct from class names	(i.e. <I>hasProperty</I> or <I>isPropertyOf</I>).
+    </div>
+
+    <div id="PN3">
+        <H4><A NAME="SECTION00043030000000000000">
+            P-N3 Short names</A>
+        </H4> Provide short names and for providing natural names with more than three nouns use the <TT>rdfs:label</TT> property with the long name.
+        For instance, for <I>ManageSupplyChainBusinessRules</I> use <I>BusinessRules</I> and set the full name in the label.
+        In order to explain the context (i.e. Supply Chain), complement this label with the <TT>skos:altLabel</TT> (cf. p:skos-altLabel).
+    </div>
+
+    <div id="PN4">
+        <H4><A NAME="SECTION00043040000000000000">
+            P-N4 Logical and short names for namespaces</A>
+        </H4>
+        Assign logical and short names to namespaces preferable, with no more than five letters (i.e. <TT>foaf:XXX, schema:XXX</TT>).
+    </div>
+    <div id="PN5">
+        <H4><A NAME="SECTION00043050000000000000">
+            P-N5 Regular space as word delimiters for labeling elements</A>
+        </H4> For example, <TT>rdfs:label "A Process that contains.."</TT>.
+    </div>
+
+    <div id="PN6">
+        <H4><A NAME="SECTION00043060000000000000">
+            P-N6 Avoid the use of conjunctions and or words with ambiguous meanings</A>
+        </H4> Avoid names with ``And'', ``Or'', ``Other'', ``Part'', ``Type'', ``Category'', ``Entity'' and those related to datatypes like ``Date'' or ``String''.
+
+    </div>
+
+    <div id="PN7">
+        <H4><A NAME="SECTION00043070000000000000">
+            P-N7 Use positive names</A>
+        </H4> Avoid the use of negations.
+        For instance, instead of <I>NoParkingAllowed</I> use <I>ParkingForbidden</I>.
+
+    </div>
+
+    <div id="PN8">
+        <H4><A NAME="SECTION00043080000000000000">
+            P-N8 Respect the names for registered products and company names</A>
+        </H4> In those cases the CamelNotation should not be used and the name of the company or product should be used as is (i.e. SAP, Daimler AG).
+    </div>
+
+    <div id="Dereferenceability">
+        <H3><A NAME="SECTION00043100000000000000"></A>
+            <A NAME="subsec:Dereferenceability"></A>
+            <BR>
+                Dereferenceability
+            </H3>
+
+            <P>
+                One of the four rules that should be followed during vocabulary development is naming things with HTTP URIs<A NAME="tex2html57"
+                HREF="footnode.html#foot428"><SUP>16</SUP></A>.
+                Adopting HTTP URIs for identifying things is appropriate due to the following reasons:
+                (1) it is simple to create global unique keys in a decentralized fashion and
+                (2) the generated key is not used just as a name but also as an identifier.
+
+                <P>
+                    By combining dereferenceability with content negotiation<A NAME="tex2html59"
+                    HREF="footnode.html#foot430"><SUP>17</SUP></A>, the server will provide adequate content for a resource based on the type of request.
+                    There are three different strategies to make URIs of resources dereferenceable: (1) slash URIs; (2) hash URIs and (3) a combination between them<A NAME="tex2html61"
+                    HREF="footnode.html#foot432"><SUP>18</SUP></A>.
+    </div>
+
+    <div id="PD1">
+
+        <H4><A NAME="SECTION00043110000000000000">
+            P-D1 Use slash URIs</A>
+        </H4>
+        When the client request a resource from server by providing its URIs, the server response will be <I>303 see other</I>.
+        Slash URI should be used when dealing with large datasets.
+        This makes the server to response only with requested resource.
+        An example of using slash URIs is as follows:
+
+        <P>
+            In Mobivoc<A NAME="tex2html63"
+            HREF="footnode.html#foot434"><SUP>19</SUP></A> vocabulary the URI that identifies the ChargingPoint resource is:
+
+            <P>
+                <I>http://purl.org/net/mobivoc/ChargingPoint</I>
+
+                <P>
+                    The URI of turtle representation of above resource should be:
+
+                    <P>
+                        <I>http://purl.org/net/mobivoc/ChargingPoint.ttl</I>
+
+                        <P>
+                            and URI of html representation should be:
+
+                            <P>
+                                <I>http://purl.org/net/mobivoc/ChargingPoint.html</I>
+
+                                <P>
+                                    <BR>
+                                        In order to get information about ChargingPoint, the client provides URI and specify request type.
+                                        In turn server response will be <I>303 see other</I> by redirecting to appropriate representation.
+
+    </div>
+    <div id="PD2">
+        <H4><A NAME="SECTION00043120000000000000">
+            P-D2 Use hash URIs</A>
+        </H4>
+        This solution is formed by including a fragment to the URIs.
+        The fragment is separated from the rest of URI by using <I>hash</I> symbol (<I>#</I>).
+        Use hash URIs when dealing with small datasets.
+        This will reduce number of HTTP round trips.
+        An example of using hash URIs is:
+
+        <P>
+            The URI of the ScorVoc<A NAME="tex2html65"
+            HREF="footnode.html#foot436"><SUP>20</SUP></A> vocabulary is:
+
+            <P>
+                <I>http://purl.org/eis/vocab/scor</I>
+
+                <P>
+                    The URI of the <I>Process</I> resource is:
+
+                    <P>
+                        <I>http://purl.org/eis/vocab/scor#Process</I>
+    </div>
+
+     <div id="PD3">
+         <H4><A NAME="SECTION00043130000000000000">
+             P-D3 Use combination between slash and hash URIs</A>
+         </H4>
+         This allows a large dataset to be split into multiple fractions.
+         Use this solution when datasets may grow to some point where it is not practical to serve all resources in single document.
+         An example of such combination is:
+
+         <P>
+             <I>http://purl.org/eis/vocab/scor/Process#this</I>
+    </div>
+
+         <div id="PD4">
+             <H4><A NAME="SECTION00043140000000000000">
+                 P-D4 Configure server to provide content negotiation</A>
+             </H4>
+             With the purpose of delivering content based on request type, server should be configured in accordance to the best practices for publishing RDF vocabularies<A NAME="tex2html67"
+             HREF="footnode.html#foot438"><SUP>21</SUP></A>.
+    </div>
+
+         <div id="Multilinguality">
+             <H2><A NAME="SECTION00044000000000000000">
+                 Multilinguality</A>
+             </H2>
+             To provide a multilingual design for ontologies is desirable but not an straightforward issue&nbsp;[<A
+             HREF="node53.html#gracia2012challenges">Gracia et&nbsp;al., 2012</A>].
+             According to our empirical analysis in sec:vocab-analysis and aiming at keeping things simple we propose the following best-practices.
+             <BR><HR>
+    </div>
+
+         <div id="PM1">
+             <H4><A NAME="SECTION00044010000000000000">
+                 P-M1 Use English as the main language</A>
+             </H4>  Use English for every element and explicitly set with the <I>@en</I> notation.
+    </div>
+
+    <div id="PM2">
+        <H4><A NAME="SECTION00044020000000000000">
+            P-M2 Multilinguality for other languages</A>
+        </H4> In order to add another language, use another line adding the same format for every element.
+        The following example illustrates this practice with translations for the class <I>SupplyChain</I>.
+
+        <P>
+            <PRE>
+                scor:SupplyChain rdf:type owl:Class ;
+                rdfs:label   "SupplyChain"@en;
+                rdfs:comment "A Supply Chain is a ..."@en ;
+                rdfs:label   "Lieferkette"@de;
+                rdfs:comment "Eine Lieferkette ist ..."@de.
+            </PRE>
+            This approach should be followed with all the elements starting from the basics ones like <TT>rdfs:label</TT> and <TT>rdfs:comment</TT> but also for the external annotation properties (i.e. <TT>skos:prefLabel</TT>).
+    </div>
+
+    <div id="Documentation">
+
+        <H2><A NAME="SECTION00045000000000000000">
+            Documentation</A>
+        </H2>
+
+        <P>
+            Providing user friendly view of vocabularies for non-experts is crucial for integrating Semantic Web with everyday Web&nbsp;[<A
+            HREF="node53.html#peroni2013tools">Peroni et&nbsp;al., 2013</A>].
+            It facilitates contribution of domain experts during the development process.
+            In addition, it helps other interested parts for easy use of vocabulary in later phases as well.
+            There exists different tools for documentation generation.
+            Basically, these tools requires that following information should be present for each resource to enable generation process.
+    </div>
+
+    <div id="PDo1">
+
+        <H4><A NAME="SECTION00045010000000000000">
+            P-Do1 Use of rdfs:label</A>
+        </H4> Add a <TT>rdfs:label</TT> to every element setting the main name of the concept that is being represented.
+    </div>
+
+    <div id="PDo2">
+        <H4><A NAME="SECTION00045020000000000000">
+            P-Do2 Use of rdfs:comment</A>
+        </H4> Add a <TT>rdfs:comment</TT> to describe the context for which the element is created.
+    </div>
+
+    <div id="PDo3">
+        <H4><A NAME="SECTION00045030000000000000">
+            P-Do3 Generate human-readable documentation</A>
+        </H4>
+        Easy-to-use documentation is critical for the wide adoption of the vocabulary.
+        As described in subsection <A HREF="node27.html#subsec:Dereferenceability">4.3.1</A>, we have two different types of URIs.
+        In case that during vocabulary creation slash URIs are used for identifying resources then tools like Schema.org documentation generation<A NAME="tex2html69"
+        HREF="footnode.html#foot440"><SUP>22</SUP></A> should be used for documentation generation.
+        Tools like Parrot<A NAME="tex2html71"
+        HREF="footnode.html#foot442"><SUP>23</SUP></A> are appropriate if hash URIs or combination between slash and hash URIs are used for identifying resources.
+    </div>
+
+    <div id="Validation">
+        <H2><A NAME="SECTION00046000000000000000">
+            Validation</A>
+        </H2>
+
+        <P>
+            Validation is an important aspect in the ontology development process&nbsp;[<A
+            HREF="node53.html#yu2009requirements">Yu et&nbsp;al., 2009</A>,<A
+            HREF="node53.html#poveda2012validating">Poveda-Villal&#243;n et&nbsp;al., 2012</A>].
+            It analyzes whether ontology correctly represents the knowledge domain in accordance to user requirements and best practices&nbsp;[<A
+            HREF="node53.html#gomez2006ontological">G&#243;mez-P&#233;rez et&nbsp;al., 2006</A>,<A
+            HREF="node53.html#yu2009requirements">Yu et&nbsp;al., 2009</A>,<A
+            HREF="node53.html#kezadri2010first">Kezadri and Pantel, 2010</A>].
+            Criteria used for validation activity are: (1) correctness; (2) completeness and (3) consistency&nbsp;[<A
+            HREF="node53.html#suarez2010neon">Su&#225;rez-Figueroa, 2010</A>].
+            With the purpose of addressing the above mentioned criteria, we propose the following practices.
+    </div>
+
+    <div id="PV1">
+        <H4><A NAME="SECTION00046010000000000000">
+            P-V1 Syntax validation</A>
+        </H4> When collaborating directly on the vocabulary source code, syntax checking is of paramount importance.
+        Ideally syntax checking is directly integrated into the editor and committing violating code is not possible.
+        For example, tools such as Parrot<A NAME="tex2html73"
+        HREF="footnode.html#foot444"><SUP>24</SUP></A> or Web-based tools such as: RDF Validation Service<A NAME="tex2html75"
+        HREF="footnode.html#foot446"><SUP>25</SUP></A> or OWL2 Validator<A NAME="tex2html77"
+        HREF="footnode.html#foot448"><SUP>26</SUP></A> can be used for finding common typos and syntax errors.
+    </div>
+
+    <div id="PV2">
+        <H4><A NAME="SECTION00046020000000000000">
+            P-V2 Code-Smell checking</A>
+        </H4> Code smells are symptoms in the software source code that possibly indicate deeper problems.
+        Similarly tools such as OOPS<A NAME="tex2html79"
+        HREF="footnode.html#foot450"><SUP>27</SUP></A> can be used for vocabulary smell checking.
+        OOPS is a Web-based tool for detecting common ontology pitfalls such as: (1) missing relationships; (2) using incorrectly ontology elements and (3) missing domain and range properties.
+        The complete list of pitfalls that are detected by OOPS is presented in [<A
+        HREF="node53.html#poveda2012validating">Poveda-Villal&#243;n et&nbsp;al., 2012</A>].
+    </div>
+
+    <div id="PV3">
+        <H4><A NAME="SECTION00046030000000000000">
+            P-V3 Consistency checking</A>
+        </H4>
+        Since we deal in vocabularies with lightweight ontologies it is not very likely to have axioms that produce semantic inconsistencies.
+        Nevertheless, our analysis in sec:vocab-analysis showed that in authoritative vocabularies there are cases that lead to semantic inconsistencies (i.e. class disjointness).
+        Handling inconsistencies impacts the quality of ontologies&nbsp;[<A
+        HREF="node53.html#abburu2012survey">Abburu, 2012</A>].
+        Tools like Pellet<A NAME="tex2html81"
+        HREF="footnode.html#foot452"><SUP>28</SUP></A>, Fact++<A NAME="tex2html83"
+        HREF="footnode.html#foot454"><SUP>29</SUP></A>, Racer<A NAME="tex2html85"
+        HREF="footnode.html#foot456"><SUP>30</SUP></A>, HermiT<A NAME="tex2html87"
+        HREF="footnode.html#foot458"><SUP>31</SUP></A> or the Web based tool ConsVISor<A NAME="tex2html89"
+        HREF="footnode.html#foot460"><SUP>32</SUP></A> should be used for consistency checking.
+    </div>
+
+    <div id="PV4">
+        <H4><A NAME="SECTION00046040000000000000">
+            P-V4 Linked Data validation</A>
+        </H4> Tools such as Vapour<A NAME="tex2html91"
+        HREF="footnode.html#foot462"><SUP>33</SUP></A> verify whether data are correctly published according Linked Data principles and the best publishing practices<A NAME="tex2html93"
+        HREF="footnode.html#foot464"><SUP>34</SUP></A>.
+    </div>
+
+    <div id="Authoring">
+        <H2><A NAME="SECTION00047000000000000000">
+            Authoring</A>
+        </H2>
+        In sec:vocab-analysis we analysed common practices that are followed by vocabulary engineers (i.e. the creation of object properties and their associated domain and range axioms).
+        It is important to remark that those practices are always domain dependent, but still can serve as general guidelines to be followed in the process of designing vocabularies.
+    </div>
+
+    <div id="PA1">
+        <H4><A NAME="SECTION00047010000000000000">
+            P-A1 Domain and range definitions for properties</A>
+        </H4>
+        When creating a property, consider to provide the associated domain and range definitions.
+        This also means that in case of object properties the corresponding classes should be defined.
+        In case of datatype properties, the range should be a suitable datatype.
+    </div>
+
+    <div id="PA2">
+        <H4><A NAME="SECTION00047020000000000000">
+            P-A2 Avoid inverse properties</A>
+        </H4> Create inverse properties only if it is strictly necessary to have a relation in two directions (i.e. <TT>invalidated</TT> and <TT>wasInvalidatedBy</TT>).
+        Inverse properties affect the size as well as the complexity of the vocabulary.
+    </div>
+
+    <div id="PA3">
+        <H4><A NAME="SECTION00047030000000000000">
+            P-A3 Use of class disjointness</A>
+        </H4> Use class disjointness to logically avoid overlapping classes.
+        Even though disjointness has been used in authoritative vocabularies, it should be carefully examined because it can easily lead to semantic inconsistencies.
+    </div>
+
+    <div id="UtilizationSKOSVocabulary">
+        <H3><A NAME="SECTION00047100000000000000">
+            Utilization of SKOS Vocabulary</A>
+        </H3>
+        The Simple Knowledge Organization System (<I>SKOS</I>)<A NAME="tex2html95"
+        HREF="footnode.html#foot466"><SUP>35</SUP></A> is a W3C recommendation for modeling vocabularies in the Web.
+        <I>SKOS</I> is currently used by at least 478 vocabularies [<A
+        HREF="node53.html#haslhofer2013using">Haslhofer et&nbsp;al., 2013</A>].
+        The utilization of some <I>SKOS</I> constructs is considered a best practice for declaring and documenting indexing terms (i.e. <TT>skos:prefLabel</TT>) and alternatives terms (i.e. <TT>skos:altLabel</TT>)&nbsp;[<A
+        HREF="node53.html#manaf2012current">Manaf et&nbsp;al., 2012</A>,<A
+        HREF="node53.html#baker2013key">Baker et&nbsp;al., 2013</A>].
+        Both above mentioned properties are subproperties of <TT>rdfs:label</TT>.
+        <I>SKOS</I> provides a more detailed notion of the labeling concept, which can be useful for better descriptions of the terms.
+    </div>
+
+    <div id="PA4">
+        <H4><A NAME="SECTION00047110000000000000">
+            P-A4 Provide <TT>skos:prefLabel</TT> to complement the labeling of concepts</A>
+        </H4>
+        The content of the labels can be different showing some difference between the semantics of each property.
+        For instance, <TT>skos:prefLabel</TT> might describe some shorter definition for the concept than <TT>rdfs:label</TT>.
+    </div>
+
+    <div id="PA5">
+        <H4><A NAME="SECTION00047120000000000000"></A>
+            <A NAME="p:skos-altLabel"></A>
+            <BR>
+                P-A5 Use <TT>skos:altLabel</TT> to describe variations of the concept
+            </H4>
+            Alternative labels can complement the label with the acronyms, abbreviations, spelling variants, and irregular plural/singular forms for a concept.
+    </div>
+
+    <div id="PR8">
+    </div>
+
+    <div id="PR8">
+    </div>
 </BODY>
+
 </HTML>
