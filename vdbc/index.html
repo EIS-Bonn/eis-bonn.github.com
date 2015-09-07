@@ -76,10 +76,8 @@ Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
                                         <A NAME="tex2html198" HREF="#PR4">P-R4 Individual resource reuse</A>
                                         <LI>
                                             <A NAME="tex2html199" HREF="#PR5">P-R5 Vocabulary module reuse</A>
-                                            <LI>
-                                                <A NAME="tex2html200" HREF="#PR6">P-R6 Reuse of actual resources</A>
                                                 <LI>
-                                                    <A NAME="tex2html201" HREF="#PR7">P-R7 Establishing alignments with existing vocabularies</A>
+                                                    <A NAME="tex2html201" HREF="#PR6">P-R6 Establishing alignments with existing vocabularies</A>
                     </UL>
                     <BR>
                     <LI>
@@ -141,11 +139,9 @@ Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
                                     <A NAME="tex2html224" HREF="#Documentation">Documentation</A>
                                     <UL>
                                         <LI>
-                                            <A NAME="tex2html225" HREF="#PDo1">P-Do1 Use of rdfs:label</A>
-                                            <LI>
-                                                <A NAME="tex2html226" HREF="#PDo2">P-Do2 Use of rdfs:comment</A>
+                                            <A NAME="tex2html225" HREF="#PDo1">P-Do1 Use of rdfs:label and rdfs:comment</A>
                                                 <LI>
-                                                    <A NAME="tex2html227" HREF="#PDo3">P-Do3 Generate human-readable documentation</A>
+                                                    <A NAME="tex2html227" HREF="#PDo2">P-Do2 Generate human-readable documentation</A>
                                     </UL>
                                     <BR>
                                     <LI>
@@ -757,19 +753,13 @@ Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
                                                                 </H4> (Opposite of P-R4) Often vocabularies require certain basic structures such as addresses, persons, organizations, which are already defined in non-authoritative vocabularies. Such structures
                                                                 comprise usually the definition of one or several classes and a number of properties. If the conceptualizations match the complete reuse of a whole module should be considered.
                                                             </div>
+
                                                             <div id="PR6">
-                                                                <H4>
-                                                                    <A NAME="SECTION00041060000000000000">
-            P-R6 Reuse of actual resources</A>
-                                                                </H4> By reusing the resources and their identifiers from other vocabularies, a very strong semantic commitment is being made. It should be primarily considered for reuse of terms from authoritative
-                                                                vocabularies (P-R1) or the reuse of complete modules (P-R5).
-                                                            </div>
-                                                            <div id="PR7">
 
                                                                 <H4>
                                                                     <A NAME="SECTION00041070000000000000">
-            P-R7 Establishing alignments with existing vocabularies</A>
-                                                                </H4> (Opposite of P-R6) Instead of the strong semantic commitment of reusing identifiers from non-authoritative vocabularies, alignments using
+            P-R6 Establishing alignments with existing vocabularies</A>
+                                                                </H4> Instead of the strong semantic commitment of reusing identifiers from non-authoritative vocabularies, alignments using
                                                                 <TT>owl:sameAs</TT>,
                                                                 <TT>owl:equivalentClass</TT>,
                                                                 <TT>owl:equivalentProperty</TT>,
@@ -1290,23 +1280,15 @@ Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 
                                                                 <H4>
                                                                     <A NAME="SECTION00045010000000000000">
-            P-Do1 Use of rdfs:label</A>
+            P-Do1 Use of rdfs:label and rdfs:comment</A>
                                                                 </H4> Add a
-                                                                <TT>rdfs:label</TT> to every element setting the main name of the concept that is being represented.
+                                                                <TT>rdfs:label</TT> to every element setting the main name of the concept that is being represented and <TT>rdfs:comment</TT> to describe the context for which the element is created.
                                                             </div>
 
                                                             <div id="PDo2">
                                                                 <H4>
-                                                                    <A NAME="SECTION00045020000000000000">
-            P-Do2 Use of rdfs:comment</A>
-                                                                </H4> Add a
-                                                                <TT>rdfs:comment</TT> to describe the context for which the element is created.
-                                                            </div>
-
-                                                            <div id="PDo3">
-                                                                <H4>
                                                                     <A NAME="SECTION00045030000000000000">
-            P-Do3 Generate human-readable documentation</A>
+            P-Do2 Generate human-readable documentation</A>
                                                                 </H4>
                                                                 Easy-to-use documentation is critical for the wide adoption of the vocabulary. As described in subsection of
                                                                 <A HREF="#Dereferenceability">Dereferenceability</A>, we have two different types of URIs. In case that during vocabulary creation slash URIs are used for identifying resources then tools like Schema.org documentation generation
